@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #101713;
+  color: #f3f4ed;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 0 9%;
+  min-height: 100vh;
+}
+
+nav {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #29332c;
+}
+
+nav h2 {
+  letter-spacing: -1px;
+}
+
+nav span, h1 span {
+  color: #b9d98c;
+}
+
+nav p, .tag, small, footer {
+  color: #a2aca2;
+}
+
+nav p {
+  font-size: 13px;
+}
+
+main {
+  min-height: 78vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  font-size: clamp(58px, 8vw, 95px);
+  line-height: 0.98;
+  letter-spacing: -5px;
+  margin-bottom: 25px;
+}
+
+.info > p:not(.tag) {
+  color: #a2aca2;
+  line-height: 1.8;
+  max-width: 360px;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 38px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stats strong {
+  font-size: 16px;
+}
+
+.stats small {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.pokemon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: absolute;
+  width: 85%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #263b2b;
+  border: 1px solid #405540;
+}
+
+.pokemon img {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 15px 25px #0006);
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 22px 0;
+  border-top: 1px solid #29332c;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 650px) {
+  body {
+    padding: 0 6%;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+    gap: 10px;
+  }
+
+  .pokemon {
+    grid-row: 1;
+  }
+
+  .pokemon img {
+    max-width: 280px;
+  }
+
+  .circle {
+    max-width: 240px;
+  }
+
+  h1 {
+    font-size: 68px;
+  }
+
+  .stats {
+    gap: 24px;
+  }
+}
