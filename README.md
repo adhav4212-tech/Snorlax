@@ -1,2 +1,2 @@
 # Snorlax
-Fan Page on THE snorlax
+Snorlax Fan Page
